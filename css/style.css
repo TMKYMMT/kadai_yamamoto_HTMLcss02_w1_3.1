@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+    margin: 0;
+    margin: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4c4c4c;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+
+
+.header {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background-color: #ffdd57;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-logo {
+    margin-right: auto;
+    font-size: 30px;
+    font-weight: bold;
+    /* font-size: bold;　存在しない。太さを指定するのは、
+font-weight: bold; */
+}
+
+.menu-nav {
+    display: flex;
+    font-weight: bold;
+    /* font-size: bold;　存在しない。太さを指定するのは、
+font-weight: bold; */
+}
+
+.menu-nav li {
+    /* margin-left: 30px;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333; */
+    padding: 0 10px;
+    /* 全てのliの左右にpaddingで余白を取る。 */
+}
+
+.menu-nav li + li {
+    /* margin-left: 30px;
+    border-left: 0;
+    border-right: 1px solid #333; */
+    border-left: 1px solid #333;
+    /* liがかさなっているところの左にborderを引く */
+}
+
+
+
+
+@media screen and (max-width: 767px) { 
+    .header {
+        display: block;
+        width: 100%;
+    }
+    
+    .menu-nav {
+        display: block;
+        text-decoration: underline;
+    }
+
+    .menu-nav li + li {
+        border-left: none;
+    }
+    /*　画面サイズ 767px以下になったらここに書いてあるcssが適用される　*/
+  }
+
+
+
+
+
+
+
+
+
+
+/* .box{
+    background: #ff8731;
+    margin: 0 auto ;
+    width: 960px;
+    height: 40px;
+    padding: 30px 40px 20px 10px;
+}
+
+
+ul{
+    max-width: 960px;
+    margin: auto;
+    display:flex;
+    justify-content: flex-end;
+
+}
+
+li {
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+}
+
+li+ li {
+    border-left: 0;
+    border-right: 1px solid #333;
+} */
